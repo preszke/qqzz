@@ -1,0 +1,27 @@
+<h1>Listing lesson_takens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesson</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lesson_takens.each do |lesson_taken| %>
+      <tr>
+        <td><%= lesson_taken.lesson %></td>
+        <td><%= lesson_taken.user %></td>
+        <td><%= link_to 'Show', lesson_taken %></td>
+        <td><%= link_to 'Edit', edit_lesson_taken_path(lesson_taken) %></td>
+        <td><%= link_to 'Destroy', lesson_taken, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lesson taken', new_lesson_taken_path %>

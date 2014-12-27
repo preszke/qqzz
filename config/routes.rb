@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :lesson_takens
+
   resources :question_takens
 
   resources :answears

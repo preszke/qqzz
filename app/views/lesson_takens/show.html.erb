@@ -1,14 +1,22 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = LessonTaken -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => LessonTaken %></h1>
+</div>
 
-<p>
-  <strong>Lesson:</strong>
-  <%= @lesson_taken.lesson %>
-</p>
+<div class="fieldset">
+  <dl>
+  </dl>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @lesson_taken.user %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              lesson_takens_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_lesson_taken_path(@lesson_taken), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              lesson_taken_path(@lesson_taken),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_lesson_taken_path(@lesson_taken) %> |
-<%= link_to 'Back', lesson_takens_path %>

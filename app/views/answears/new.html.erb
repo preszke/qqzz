@@ -1,5 +1,6 @@
-<h1>New answear</h1>
+<%- model_class = Answear -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => Answear %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', answears_path %>

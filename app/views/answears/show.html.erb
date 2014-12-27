@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is correct:</strong>
+  <%= @answear.is_correct %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @answear.text %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @answear.question %>
+</p>
+
+<%= link_to 'Edit', edit_answear_path(@answear) %> |
+<%= link_to 'Back', answears_path %>

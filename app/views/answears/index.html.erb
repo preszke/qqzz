@@ -1,0 +1,29 @@
+<h1>Listing answears</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is correct</th>
+      <th>Text</th>
+      <th>Question</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answears.each do |answear| %>
+      <tr>
+        <td><%= answear.is_correct %></td>
+        <td><%= answear.text %></td>
+        <td><%= answear.question %></td>
+        <td><%= link_to 'Show', answear %></td>
+        <td><%= link_to 'Edit', edit_answear_path(answear) %></td>
+        <td><%= link_to 'Destroy', answear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Answear', new_answear_path %>

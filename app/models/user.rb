@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
         :recoverable, :rememberable, :trackable, :validatable
   has_many :lesson_takens
   has_many :question_takens
+  has_many :lessons
 end

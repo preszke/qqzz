@@ -1,5 +1,6 @@
-<h1>New question_taken</h1>
+<%- model_class = QuestionTaken -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => QuestionTaken %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', question_takens_path %>
